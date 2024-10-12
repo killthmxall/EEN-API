@@ -330,7 +330,3 @@ PS D:\Proyectos Eagle Eye Networks> & C:/Users/killt/AppData/Local/Programs/Pyth
 "expires_in":43173}
 ```
 
-
-print(response.text)
-```
-
