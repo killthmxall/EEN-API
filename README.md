@@ -31,7 +31,9 @@ Dirígete a la sección **Manage applications** y da clic en el botón **Add app
 ![](https://files.readme.io/72588e2-New_Application_Form.png)
 
 > [!NOTE]
-> Useful information that users should know, even when skimming content.
+> Si está integrando la API de Eagle Eye con una aplicación móvil o web que no tiene un canal de retorno seguro para almacenar tokens de acceso, habilite la opción Público.
+
+>Para aplicaciones web o en la nube con un canal de retorno seguro, mantenga la opción Público desactivada. Esto establecerá el tipo de credencial de cliente en Confidencial, lo que le permitirá recibir un token de actualización y un token de acceso.
 
 
 
