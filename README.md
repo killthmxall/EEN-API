@@ -30,10 +30,11 @@ Una vez confirmada la dirección de correo se debe iniciar sesión en [My Applic
 
 Dirígete a la sección **Manage applications** y da clic en el botón **Add application**. Es necesario completar el siguiente formulario:
 
-![](https://files.readme.io/72588e2-New_Application_Form.png)
+![](https://github.com/killthmxall/EEN-API/blob/main/assets/imagenes/img4.png?raw=true)
 
 > [!NOTE]
 > Si está integrando la API de Eagle Eye con una aplicación móvil o web que no tiene un canal de retorno seguro para almacenar tokens de acceso, habilite la opción Público.
+
 >Para aplicaciones web o en la nube con un canal de retorno seguro, mantenga la opción Público desactivada. Esto establecerá el tipo de credencial de cliente en Confidencial, lo que le permitirá recibir un token de actualización y un token de acceso.
 
 ### Ver las Credenciales de Cliente (Client Credentials)
@@ -70,11 +71,7 @@ Todas las solicitudes de API deben realizarse con la Base URL.
 
 La Base URL garantiza que te comuniques directamente con la plataforma Eagle Eye Video API, lo que garantiza una latencia más baja.
 
-Para recuperar esta Base URL en Postman sigue los siguientes pasos:
-
-## Recuperar la Base URL con Postman
-
-Sigue estos pasos para recuperar la **Base URL** de la API de **Eagle Eye Networks** utilizando **Postman**.
+Sigue los siguientes pasos para recuperar la **Base URL** de la API de **Eagle Eye Networks** utilizando **Postman**.
 
 ### 1. Abrir Postman
 Abre la aplicación de Postman en tu computadora.
@@ -101,9 +98,9 @@ En la pestaña **Headers** agrega los siguientes headers a la solicitud:
 ---
 
 ### 3. Añadir Authorization
-En la pestaña **Authorization** abre el dropdown **Auth Type** y selecciona **Bearer Token**:
+  1. En la pestaña **Authorization** abre el dropdown **Auth Type** y selecciona **Bearer Token**:
 
-En el campo de texto Token escribe el **token de acceso** que se te dió en la sección Quick API Testing.
+  2. En el campo de texto Token escribe el **token de acceso** que se te dió en la sección Quick API Testing.
 
 - **Authorization:**
   - **Token:** `tu_token_de_acceso`
