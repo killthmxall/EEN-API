@@ -95,6 +95,9 @@ En la pestaña **Headers** agrega los siguientes headers a la solicitud:
 - **Header 1:**
   - **Key:** `Accept`
   - **Value:** `application/json`
+
+  ![](https://github.com/killthmxall/EEN-API/blob/main/assets/imagenes/img2.png?raw=true)
+    
 ---
 
 ### 3. Añadir Authorization
@@ -104,6 +107,9 @@ En el campo de texto Token escribe el **token de acceso** que se te dió en la s
 
 - **Authorization:**
   - **Token:** `tu_token_de_acceso`
+ 
+  ![](https://github.com/killthmxall/EEN-API/blob/main/assets/imagenes/img3.png?raw=true)
+    
 ---
 
 
