@@ -168,7 +168,7 @@ Después de iniciar sesión, el usuario es redirigido a la URI de redireccionami
 
 Para ello puede ejecutar un HTTP POST o un código de Python:
 
-### HTTP POST
+## Método con HTTP POST
 
 ### 1. Abrir Postman
 Abre la aplicación de Postman en tu computadora.
@@ -240,19 +240,31 @@ Haz clic en **Send** para enviar la solicitud.
 
 ---
 
-### 5. Ver la respuesta
-Si la solicitud es exitosa, recibirás una respuesta en formato JSON como esta:
+### 5. Resultado
+En respuesta, se obtendrá un token de acceso y un token de actualización. 
+
+El token de acceso se puede utilizar para autenticar llamadas de API, mientras que el token de actualización se puede almacenar para su uso futuro. 
+
+Respuesta de ejemplo:
 
 ```json
 {
-  "httpsBaseUrl": {
-    "hostname": "api.c000.eagleeyenetworks.com",
-    "port": 443
-  }
+    "access_token": "eyJraWQiOiI2ODYxYjBjYS0wZjI2LTExZWQtODYxZC0wMjQyYWMxMjAwMDIiLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJjYTBmNjFhYiIsImF1ZCI6InZtcy5hcGkiLCJpc3MiOiJ2bXMuYXV0aC52MSIsInZtc19hY2NvdW50IjoiMDAwMDExMDYiLCJleHAiOjE2NjAzNjA0ODksImlhdCI6MTY2MDMxNzI4OSwianRpIjoiODJlNWMyMDQ1OTM1OTczNGYyOTU4NjlkZDhlYzIyMDMiLCJjbGllbnRfaWQiOiJCTVRPLVRFU1QiLCJ2bXNfY2x1c3RlciI6ImMwMDAifQ.",
+    "expires_in": 43198,
+    "httpsBaseUrl": {
+        "hostname": "api.c001.eagleeyenetworks.com",
+        "port": 443
+    },
+    "refresh_token": "w1P0nwA7NEZmo5tEd76cco3y5bi4Js6QNgZsXnFNBDRepnJmA2F73tGJ4G_eA0WttI_8xsovsFLvd5uOUayqrNwu7PZ1SH0DAWVZ3",
+    "scope": "vms.all",
+    "token_type": "Bearer"
 }
 ```
 
-### Python
+> [!NOTE]
+>Obtuviste el token de acceso y la URL base. El token de acceso obtenido se puede utilizar para acceder a los datos del usuario. Por ejemplo, para obtener una descripción general de la cámara o una grabación.
+
+## Método con Python
 
 ```
 import requests
