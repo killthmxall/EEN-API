@@ -125,5 +125,40 @@ Si la solicitud es exitosa, recibirás una respuesta en formato JSON como esta:
     "port": 443
   }
 }
+```
 
+## Logging in
 
+La API de Eagle Eye Networks utiliza el estándar "Código de Autorización" de OAuth2 para autenticar a un usuario y obtener un conjunto de tokens.
+
+Estos tokens pueden ser utilizados por una aplicación de terceros y también pueden utilizarse para llamadas de API de back-end a back-end.
+
+### Fase 1: Conceder acceso a una aplicación de terceros
+
+> [!NOTE]
+> Sólo la autorización inicial (Fase 1) requiere acción humana, la autorización de máquina a máquina (Fase 2) puede automatizarse completamente.
+
+### Procedimiento
+1. Con el siguiente enlace, realice una solicitud en Postman como HTTP POST o HTTP GET o accede directamente desde el navegador.
+
+```
+https://auth.eagleeyenetworks.com/oauth2/authorize?scope=vms.all&client_id={clientId}&response_type=code&redirect_uri={RedirectURL}
+```
+
+**Nota**
+ * Reemplaza la parte de {clientId} por el valor que se obtuvo en la página de [My Application](https://developer.eagleeyenetworks.com/page/my-application).
+
+ * Reemplaza la parte de {Redirect URL} por la URI que se establecio anteriormente en la lista blanca en la página.
+
+* No olvides borrar los corchetes `{}`
+
+2. Como resultado, se obtendrá un código 200 OK, y el usuario será redirigido a la página de inicio de sesión `auth.eagleeyenetworks.com`.
+
+3. Si el usuario aún no ha iniciado sesión, deberá iniciar sesión en Eagle Eye Networks en la siguiente pantalla:
+
+![](https://files.readme.io/a3accba-image.png)
+
+Después de iniciar sesión, el usuario es redirigido a la URI de redireccionamiento junto un parámetro **code**: 
+`<redirect_uri>?code=<code parameter>`
+
+![](https://github.com/killthmxall/EEN-API/blob/main/assets/imagenes/img5.png?raw=true)
