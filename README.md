@@ -156,7 +156,7 @@ https://auth.eagleeyenetworks.com/oauth2/authorize?scope=vms.all&client_id={clie
 
 ![](https://files.readme.io/a3accba-image.png)
 
-Después de iniciar sesión, el usuario es redirigido a la URI de redireccionamiento junto un parámetro nuevo denominado **code**: 
+Después de iniciar sesión, el usuario es redirigido a la URI de redireccionamiento (http://localhost:4200) junto un parámetro nuevo denominado **code**: 
 `<redirect_uri>?code=<code parameter>`
 
 ![](https://github.com/killthmxall/EEN-API/blob/main/assets/imagenes/img5.png?raw=true)
@@ -166,7 +166,93 @@ Después de iniciar sesión, el usuario es redirigido a la URI de redireccionami
 
 4. Utilice este código (code) para obtener el **token de acceso** y el **token de actualización**. 
 
-Para ello, ejecute el siguiente código Python:
+Para ello puede ejecutar un HTTP POST o un código de Python:
+
+### HTTP POST
+
+### 1. Abrir Postman
+Abre la aplicación de Postman en tu computadora.
+
+---
+
+### 2. Configurar la solicitud
+- **Método:** `POST`
+- **URL:** `https://auth.eagleeyenetworks.com/oauth2/token`
+
+  ![](https://github.com/killthmxall/EEN-API/blob/main/assets/imagenes/img6.png?raw=true)
+
+---
+
+### 3. Añadir los Parámateros
+En la pestaña **Parámetros** agrega los siguientes parámetros a la solicitud:
+
+- **Parámetro 1:**
+  - **Key:** `grant_type`
+  - **Value:** `authorization_code`
+
+- **Parámetro 2:**
+  - **Key:** `scope`
+  - **Value:** `vms.all`
+
+- **Parámetro 3:**
+  - **Key:** `code`
+  - **Value:** `El código obtenido junto a la URI de redireccionamiento `
+
+  - **Parámetro 4:**
+  - **Key:** `redirect_uri`
+  - **Value:** `La URI de redireccionamiento con http(s)://`
+
+  ![](https://github.com/killthmxall/EEN-API/blob/main/assets/imagenes/img7.png?raw=true)
+    
+---
+
+### 4. Añadir los Headers
+En la pestaña **Headers** agrega los siguientes headers a la solicitud:
+
+- **Header 1:**
+  - **Key:** `accept`
+  - **Value:** `application/json`
+
+- **Header 2:**
+  - **Key:** `content-type`
+  - **Value:** `application/x-www-form-urlencoded`
+
+  ![](https://github.com/killthmxall/EEN-API/blob/main/assets/imagenes/img8.png?raw=true)
+    
+---
+
+### 3. Añadir Authorization
+  1. En la pestaña **Authorization** abre el dropdown **Auth Type** y selecciona **Basic Auth**:
+
+  2. En el campo de texto Username escribe el **client_id** y en el campo de texto Password escribe el **client_secret**.
+
+- **Authorization:**
+  - **Username** `client_id`
+  - **Password** `client_secret`
+ 
+  ![](https://github.com/killthmxall/EEN-API/blob/main/assets/imagenes/img9.png?raw=true)
+    
+---
+
+
+### 4. Enviar la solicitud
+Haz clic en **Send** para enviar la solicitud.
+
+---
+
+### 5. Ver la respuesta
+Si la solicitud es exitosa, recibirás una respuesta en formato JSON como esta:
+
+```json
+{
+  "httpsBaseUrl": {
+    "hostname": "api.c000.eagleeyenetworks.com",
+    "port": 443
+  }
+}
+```
+
+### Python
 
 ```
 import requests
