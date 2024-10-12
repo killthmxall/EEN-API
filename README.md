@@ -273,18 +273,17 @@ Respuesta de ejemplo:
 
 ## Método con Python
 
-### Requisitos previos
+### 1. Instalar Python: 
+Puedes descargar Python desde [python.org](https://www.python.org/downloads/).
 
-1. **Instalar Python**: Puedes descargar Python desde [python.org](https://www.python.org/downloads/).
-
-2. **Instalar la biblioteca `requests`**:
+### 2. Instalar la biblioteca `requests`:
    - Abre una terminal (o PowerShell en Windows).
    - Ejecuta el siguiente comando para instalar la biblioteca `requests`:
      ```bash
      pip install requests
      ```
 
-## Código Python
+### 3. Ejecuta el código Python
 
 A continuación utiliza el siguiente código para realizar una solicitud `POST` para obtener un **access_token** y un **refresh_token**:
 
@@ -311,6 +310,20 @@ response = requests.post(
   ),
   data=data
 )
+
+print(response.text)
+```
+
+### 4. Respuesta
+
+Una vez ejecutado el código de Python, en consola se obtendrá una respuesta indicando el `accesss_token` y el `refresh_token`:
+
+```
+PS D:\Proyectos Eagle Eye Networks> & C:/Users/killt/AppData/Local/Programs/Python/Python313/python.exe "d:/Proyectos Eagle Eye Networks/obtener access token/main.py"
+{"access_token":"eyJraWQiOiI2ODYxYjBjYS0wZjI2LTExZWQtODYxZC0wMjQyYWMxMjAwMDIiLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9",
+"refresh_token":"Av4xEFcNriL_gi_eTnJO8-CAz7iMcTVZlkOpCNpY_8ECy1rubQFXW-VOuwAcXI7w9YxJ6GV5bhU6pullQIXvYJk31G4p6taocE42qlgc11XLDBwnMdSmjn7SSHSB_WSv","httpsBaseUrl":{"hostname":"api.c028.eagleeyenetworks.com","port":443},"scope":"vms.all","token_type":"Bearer","expires_in":43173}
+```
+
 
 print(response.text)
 ```
