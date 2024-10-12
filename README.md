@@ -152,6 +152,11 @@ https://auth.eagleeyenetworks.com/oauth2/authorize?scope=vms.all&client_id={clie
 > 
 > No olvides borrar los corchetes `{}`
 
+Ejemplo:
+```
+https://auth.eagleeyenetworks.com/oauth2/authorize?scope=vms.all&client_id=c5ad678ac8ea4f9ca0775da8f779a1e1&response_type=code&redirect_uri=http://localhost:4200
+```
+
 2. Como resultado, se obtendrá un código 200 OK, y el usuario será redirigido a la página de inicio de sesión `auth.eagleeyenetworks.com`.
 
 3. Si el usuario aún no ha iniciado sesión, deberá iniciar sesión en Eagle Eye Networks en la siguiente pantalla:
