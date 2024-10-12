@@ -85,6 +85,8 @@ Abre la aplicación de Postman en tu computadora.
 - **Método:** `GET`
 - **URL:** `https://api.eagleeyenetworks.com/api/v3.0/clientSettings`
 
+  ![](https://github.com/killthmxall/EEN-API/blob/main/assets/imagenes/img1.png?raw=true)
+
 ---
 
 ### 3. Añadir los Headers
