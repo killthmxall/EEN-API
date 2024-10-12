@@ -320,6 +320,7 @@ Una vez ejecutado el código de Python, en consola se obtendrá una respuesta in
 
 ```python
 PS D:\Proyectos Eagle Eye Networks> & C:/Users/killt/AppData/Local/Programs/Python/Python313/python.exe "d:/Proyectos Eagle Eye Networks/obtener access token/main.py"
+
 {"access_token":"eyJraWQiOiI2ODYxYjBjYS0wZjI2LTExZWQtODYxZC0wMjQyYWMxMjAwMDIiLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9",
 "refresh_token":"Av4xEFcNriL_gi_eTnJO8-CAz7iMcTVZlkOpCNpY_8ECy1rubQFXW-VOuwAcXI7w9YxJ6GV5bhU6pullQIXvYJk31G4p6taocE42qlgc11XLDBwnMdSmjn7SSHSB_WSv","httpsBaseUrl":{"hostname":"api.c028.eagleeyenetworks.com","port":443},"scope":"vms.all","token_type":"Bearer","expires_in":43173}
 ```
