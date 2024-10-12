@@ -319,7 +319,7 @@ print(response.text)
 Una vez ejecutado el código de Python, en consola se obtendrá una respuesta indicando el `accesss_token` y el `refresh_token`:
 
 ```python
-PS D:\Proyectos Eagle Eye Networks> & C:/Users/killt/AppData/Local/Programs/Python/Python313/python.exe "d:/Proyectos Eagle Eye Networks/obtener access token/main.py"
+PS D:\Proyectos Eagle Eye Networks> & C:/Users/killt/AppData/Local/Programs/Python/Python313/python.exe
 
 {"access_token":"eyJraWQiOiI2ODYxYjBjYS0wZjI2LTExZWQtODYxZC0wMjQyYWMxMjAw...",
 "refresh_token":"Av4xEFcNriL_gi_eTnJO8-CAz7iMcTVZlkOpCNpY_8ECy1rubQFXW-VO...",
