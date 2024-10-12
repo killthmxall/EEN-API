@@ -273,15 +273,30 @@ Respuesta de ejemplo:
 
 ## Método con Python
 
-```
+### Requisitos previos
+
+1. **Instalar Python**: Puedes descargar Python desde [python.org](https://www.python.org/downloads/).
+
+2. **Instalar la biblioteca `requests`**:
+   - Abre una terminal (o PowerShell en Windows).
+   - Ejecuta el siguiente comando para instalar la biblioteca `requests`:
+     ```bash
+     pip install requests
+     ```
+
+## Código Python
+
+A continuación utiliza el siguiente código para realizar una solicitud `POST` para obtener un **access_token** y un **refresh_token**:
+
+```python
 import requests
 
 url = "https://auth.eagleeyenetworks.com/oauth2/token"
 data = {
   "grant_type": "authorization_code",
   "scope": "vms.all",
-  "code": "{code}",
-  "redirect_uri": "{URI with http(s)://}"
+  "code": "{code}",  # Reemplaza con tu código de autorización
+  "redirect_uri": "{URI with http(s)://}"  # Reemplaza con tu URI de redirección
 }
 headers = {
     "accept": "application/json",
@@ -291,8 +306,8 @@ response = requests.post(
   url,
   headers=headers,
   auth=(
-    'CLIENT_ID',
-    'CLIENT_SECRET'
+    'CLIENT_ID',       # Reemplaza con tu CLIENT_ID
+    'CLIENT_SECRET'    # Reemplaza con tu CLIENT_SECRET
   ),
   data=data
 )
