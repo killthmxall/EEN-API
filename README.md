@@ -145,12 +145,10 @@ Estos tokens pueden ser utilizados por una aplicación de terceros y también pu
 https://auth.eagleeyenetworks.com/oauth2/authorize?scope=vms.all&client_id={clientId}&response_type=code&redirect_uri={RedirectURL}
 ```
 
-**Nota**
- * Reemplaza la parte de {clientId} por el valor que se obtuvo en la página de [My Application](https://developer.eagleeyenetworks.com/page/my-application).
-
- * Reemplaza la parte de {Redirect URL} por la URI que se establecio anteriormente en la lista blanca en la página.
-
-* No olvides borrar los corchetes `{}`
+> [!NOTE]
+> Reemplaza la parte de {clientId} por el valor que se obtuvo en la página de [My Application](https://developer.eagleeyenetworks.com/page/my-application).
+>Reemplaza la parte de {Redirect URL} por la URI que se establecio anteriormente en la lista blanca en la página.
+>No olvides borrar los corchetes `{}`
 
 2. Como resultado, se obtendrá un código 200 OK, y el usuario será redirigido a la página de inicio de sesión `auth.eagleeyenetworks.com`.
 
@@ -158,7 +156,42 @@ https://auth.eagleeyenetworks.com/oauth2/authorize?scope=vms.all&client_id={clie
 
 ![](https://files.readme.io/a3accba-image.png)
 
-Después de iniciar sesión, el usuario es redirigido a la URI de redireccionamiento junto un parámetro **code**: 
+Después de iniciar sesión, el usuario es redirigido a la URI de redireccionamiento junto un parámetro nuevo denominado **code**: 
 `<redirect_uri>?code=<code parameter>`
 
 ![](https://github.com/killthmxall/EEN-API/blob/main/assets/imagenes/img5.png?raw=true)
+
+> [!NOTE]
+> Tenga en cuenta que el código (code) solo dura 5 minutos.
+
+4. Utilice este código (code) para obtener el **token de acceso** y el **token de actualización**. 
+
+Para ello, ejecute el siguiente código Python:
+
+```
+import requests
+
+url = "https://auth.eagleeyenetworks.com/oauth2/token"
+data = {
+  "grant_type": "authorization_code",
+  "scope": "vms.all",
+  "code": "{code}",
+  "redirect_uri": "{URI with http(s)://}"
+}
+headers = {
+    "accept": "application/json",
+    "content-type": "application/x-www-form-urlencoded"
+}
+response = requests.post(
+  url,
+  headers=headers,
+  auth=(
+    'CLIENT_ID',
+    'CLIENT_SECRET'
+  ),
+  data=data
+)
+
+print(response.text)
+```
+
