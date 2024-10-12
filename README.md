@@ -147,8 +147,10 @@ https://auth.eagleeyenetworks.com/oauth2/authorize?scope=vms.all&client_id={clie
 
 > [!NOTE]
 > Reemplaza la parte de {clientId} por el valor que se obtuvo en la página de [My Application](https://developer.eagleeyenetworks.com/page/my-application).
->Reemplaza la parte de {Redirect URL} por la URI que se establecio anteriormente en la lista blanca en la página.
->No olvides borrar los corchetes `{}`
+> 
+> Reemplaza la parte de {Redirect URL} por la URI que se establecio anteriormente en la lista blanca en la página.
+> 
+> No olvides borrar los corchetes `{}`
 
 2. Como resultado, se obtendrá un código 200 OK, y el usuario será redirigido a la página de inicio de sesión `auth.eagleeyenetworks.com`.
 
