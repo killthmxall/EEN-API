@@ -161,7 +161,7 @@ Después de iniciar sesión, el usuario es redirigido a la URI de redireccionami
 
 ![](https://github.com/killthmxall/EEN-API/blob/main/assets/imagenes/img5.png?raw=true)
 
-> [!NOTE]
+> [!CAUTION]
 > Tenga en cuenta que el código (code) solo dura 5 minutos.
 
 4. Utilice este código (code) para obtener el **token de acceso** y el **token de actualización**. 
