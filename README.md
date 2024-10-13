@@ -414,3 +414,17 @@ Una vez configurado y enviado el HTTP POST, la respuesta debería incluir el tok
     "scope": "vms.all",
     "token_type": "Bearer"
 }
+
+## Logging out
+
+* Si cierra sesión en el navegador, se cerrará la sesión de todas las aplicaciones.
+
+* Si cierra sesión a través de una integración de terceros, solo se cerrará la sesión de esa aplicación específica.
+
+## Deleting the token
+
+Para cerrar sesión, envíe una llamada API a `https://auth.eagleeyenetworks.com/oauth2/revoke` con el token que desea revocar. 
+Si revoca un token de actualización, también se eliminará el token de acceso correspondiente.
+
+> [!NOTE]
+> La llamada a la API debe realizarse como una solicitud HTTP POST con el token en el cuerpo de la solicitud. El content_type debe ser application/x-www-form-urlencoded.
