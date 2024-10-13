@@ -346,7 +346,7 @@ El `refresh_token` reemplaza el nombre de usuario y la contraseña debido a que 
 - **Método:** `POST`
 - **URL:** `https://auth.eagleeyenetworks.com/oauth2/token`
 
-![]()
+![](https://github.com/killthmxall/EEN-API/blob/main/assets/imagenes/img10.png?raw=true)
 
 ---
 
@@ -365,7 +365,7 @@ En la pestaña **Params** agrega los siguientes parámetros para la solicitud:
     - **Key:** `refresh_token`
     - **Value:** `Kq5j2TP-IXWIz3qwOUkK7xLQjUZyXKCUSDWENz8EQ8MUGuJ2QOke9So5MCbKwajpl2Jv86rZoUxU-NUhR7UQO1KsobswLyBfiOhDO4Zp6V9efF4S5dxigVRBeUA4-_K8`
 
-![]()
+![](https://github.com/killthmxall/EEN-API/blob/main/assets/imagenes/img11.png?raw=true)
 
 ---
 
@@ -380,7 +380,7 @@ En la pestaña **Headers**, agrega los siguientes headers a la solicitud:
   - **Key:** `content-Type`
   - **Value:** `application/x-www-form-urlencoded`
 
-![]()
+![](https://github.com/killthmxall/EEN-API/blob/main/assets/imagenes/img12.png?raw=true)
 
 ---
 
@@ -389,6 +389,8 @@ En la pestaña **Authorization**, selecciona **Basic Auth** como el tipo de aute
 
 - **Username:** `client_id`
 - **Password:** `client_secret`
+
+![](https://github.com/killthmxall/EEN-API/blob/main/assets/imagenes/img13.png?raw=true)
 
 ---
 
