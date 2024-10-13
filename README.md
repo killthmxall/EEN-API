@@ -460,7 +460,27 @@ En la pestaña **Body** marca la opción **x-www-form-urlencoded** y agrega el a
 
 ---
 
-### 4. Añadir Authorization
+### 4. Codificar las credenciales en Base 64
+Antes de añadir la Authorization será necesario codificar las credenciales **client_id** y **client_secret** en formato Base64. Para esto haz uso del siguiente código Python que ayudará a codificar las credenciales.
+El formato en el cual se codifican las credenciales es el siguiente <client_id:client_secret> añadiendo ":" en medio de ambas credenciales.
+
+```Python
+import base64
+
+# CODIFICAR LAS CREDENCIALES
+# Formato <client_id:client_secret>
+codificar = b"""c5ad678ac8ea4f9ca0775da8f779a1e1:G5CK^fvP0WqiQNhP[f38"""
+
+print(base64.b64encode(codificar))
+
+# DECODIFICAR LO ANTERIOR
+decode = b'YzVhZDY3OGFjOGVhNGY5Y2EwNzc1ZGE4Zjc3OWExZTE6RzVDS15mdlAwV3FpUU5oUFtmMzg='
+
+print(base64.b64decode(decode))
+```
+
+
+### 4.1 Añadir Authorization
 En la pestaña **Authorization**, selecciona **Bearer Token** como el tipo de autenticación y añade las credenciales codificadas en **Base64**:
 
 - **Authorization:**
