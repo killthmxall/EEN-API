@@ -4,7 +4,7 @@ url = "https://auth.eagleeyenetworks.com/oauth2/token"
 data = {
   "grant_type": "authorization_code",
   "scope": "vms.all",
-  "code": "P9ka6AXvIZNId9tVpUOV-RYSZxwleazh2kaGOEF9SKZaK7RBdRiNFGUKDq-6pIwe8PYwytOLORL62Pveb15nXAf6TLBYEGMJOJoIQbLO_rJjxmDaWTle9zLT6yKe0QyA",
+  "code": "ApZPutf1zNMQcGd7wcZW5jrVC_eigIAaNORFkCKzQVWbJA_dRuBF6p7xkebmgdOUbd5OV_-CS8_B0R6xVDa4qUFvwlTwUOkx3sfxl13anNheC-k0ScQeUCH2rB1BaQSJ",
   "redirect_uri": "http://localhost:4200"
 }
 headers = {
