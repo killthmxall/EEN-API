@@ -414,6 +414,7 @@ Una vez configurado y enviado el HTTP POST, la respuesta debería incluir el tok
     "scope": "vms.all",
     "token_type": "Bearer"
 }
+```
 
 ## Logging out
 
