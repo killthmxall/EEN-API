@@ -470,7 +470,7 @@ import base64
 
 # CODIFICAR LAS CREDENCIALES
 # Formato <client_id:client_secret>
-codificar = b"""c5ad678ac8ea4f9ca0775da8f779a1e1:G5CK^fvP0WqiQNhP[f38"""
+codificar = b"""client_id:client_secret"""
 
 print(base64.b64encode(codificar))
 
