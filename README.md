@@ -429,3 +429,54 @@ Si revoca un token de actualización, también se eliminará el token de acceso 
 
 > [!NOTE]
 > La llamada a la API debe realizarse como una solicitud HTTP POST con el token en el cuerpo de la solicitud. El content_type debe ser application/x-www-form-urlencoded.
+
+### 1. Configurar la solicitud
+- **Método:** `POST`
+- **URL:** `https://auth.eagleeyenetworks.com/oauth2/revoke`
+
+![](https://github.com/killthmxall/EEN-API/blob/main/assets/imagenes/img14.png?raw=true)
+
+---
+
+### 2. Añadir el Header
+En la pestaña **Headers**, agrega los siguientes headers a la solicitud:
+
+- **Header 1:**
+  - **Key:** `Content-Type`
+  - **Value:** `application/x-www-form-urlencoded`
+
+![](https://github.com/killthmxall/EEN-API/blob/main/assets/imagenes/img15.png?raw=true)
+
+---
+
+### 3. Añadir el Body
+En la pestaña **Body** marca la opción **x-www-form-urlencoded** y agrega el access_token:
+
+- **Body 1:**
+  - **Key:** `token`
+  - **Value:** `access_token`
+
+![](https://github.com/killthmxall/EEN-API/blob/main/assets/imagenes/img16.png?raw=true)
+
+---
+
+### 4. Añadir Authorization
+En la pestaña **Authorization**, selecciona **Bearer Token** como el tipo de autenticación y añade las credenciales codificadas en **Base64**:
+
+- **Authorization:**
+  - **Token:** `<clientid:clientsecrets>.base64()`
+
+![](https://github.com/killthmxall/EEN-API/blob/main/assets/imagenes/img17.png?raw=true)
+
+---
+
+### 5. Enviar la solicitud
+Haz clic en **Send** para enviar la solicitud.
+
+---
+
+### 6. Resultado
+Una vez configurado y enviado el HTTP POST, se obtendrá como respuesta un código de estado **200 OK**.
+
+![](https://github.com/killthmxall/EEN-API/blob/main/assets/imagenes/img18.png?raw=true)
+
