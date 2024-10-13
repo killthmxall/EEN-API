@@ -330,3 +330,85 @@ PS D:\Proyectos Eagle Eye Networks> & C:/Users/killt/AppData/Local/Programs/Pyth
 "expires_in":43173}
 ```
 
+## Fase 2: Machine-to-machine (M2M) authentication
+
+### M2M Authentication with an expiring refresh token
+
+Una vez obtenido el `refresh_token`, se puede utilizar para iniciar sesión nuevamente. 
+El `refresh_token` reemplaza el nombre de usuario y la contraseña debido a que la base de datos almacena los `refresh_token`. De esta manera, la contraseña del cliente nunca se almacena en ningún lugar ni puede quedar expuesta.
+
+> [!CAUTION]
+> Se recomienda almacenar el token de actualización en un lugar seguro. El token de actualización nunca debe quedar expuesto.
+
+## Iniciar sesión con un HTTP POST
+
+### 1. Configurar la solicitud
+- **Método:** `POST`
+- **URL:** `https://auth.eagleeyenetworks.com/oauth2/token`
+
+![]()
+
+---
+
+### 2. Añadir los Parámetros
+En la pestaña **Params** agrega los siguientes parámetros para la solicitud:
+
+- **Parámetro 1:**
+    - **Key:** `grant_type`
+    - **Value:** `refresh_token`
+
+- **Parámetro 2:**
+    - **Key:** `scope`
+    - **Value:** `vms.all`
+
+- **Parámetro 3:**
+    - **Key:** `refresh_token`
+    - **Value:** `Kq5j2TP-IXWIz3qwOUkK7xLQjUZyXKCUSDWENz8EQ8MUGuJ2QOke9So5MCbKwajpl2Jv86rZoUxU-NUhR7UQO1KsobswLyBfiOhDO4Zp6V9efF4S5dxigVRBeUA4-_K8`
+
+![]()
+
+---
+
+### 3. Añadir los Headers
+En la pestaña **Headers**, agrega los siguientes headers a la solicitud:
+
+- **Header 1:**
+  - **Key:** `accept`
+  - **Value:** `application/json`
+
+- **Header 2:**
+  - **Key:** `content-Type`
+  - **Value:** `application/x-www-form-urlencoded`
+
+![]()
+
+---
+
+### 4. Añadir Authorization
+En la pestaña **Authorization**, selecciona **Basic Auth** como el tipo de autenticación y añade las credenciales:
+
+- **Username:** `client_id`
+- **Password:** `client_secret`
+
+---
+
+### 5. Enviar la solicitud
+Haz clic en **Send** para enviar la solicitud.
+
+---
+
+### 6. Resultado
+Una vez configurado y enviado el HTTP POST, la respuesta debería incluir el token de acceso y el token de actualización, entre otros datos.
+
+```json
+{
+    "access_token": "eyJraWQiOiI2ODYxYjBjYS0wZjI2LTExZWQtODYxZC0wMjQyYWMxMjAwMDIiLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJjYTBmNjFhYiIsImF1ZCI6InZtcy5hcGkiLCJpc3MiOiJ2bXMuYXV0aC52MSIsInZtc19hY2NvdW50IjoiMDAwMDExMDYiLCJleHAiOjE2NjAzNjA0ODksImlhdCI6MTY2MDMxNzI4OSwianRpIjoiODJlNWMyMDQ1OTM1OTczNGYyOTU4NjlkZDhlYzIyMDMiLCJjbGllbnRfaWQiOiJCTVRPLVRFU1QiLCJ2bXNfY2x1c3RlciI6ImMwMDAifQ.",
+    "expires_in": 43198,
+    "httpsBaseUrl": {
+        "hostname": "api.c001.eagleeyenetworks.com",
+        "port": 443
+    },
+    "refresh_token": "w1P0nwA7NEZmo5tEd76cco3y5bi4Js6QNgZsXnFNBDRepnJmA2F73tGJ4G_eA0WttI_8xsovsFLvd5uOUayqrNwu7PZ1SH0DAWVZ3",
+    "scope": "vms.all",
+    "token_type": "Bearer"
+}
