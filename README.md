@@ -501,17 +501,4 @@ Una vez configurado y enviado el HTTP POST, se obtendrá como respuesta un códi
 
 ![](https://github.com/killthmxall/EEN-API/blob/main/assets/imagenes/img18.png?raw=true)
 
-# Mi Proyecto
-
-## Características
-- Función 1
-- Función 2
-
-<details>
-  <summary>Ver más detalles</summary>
-
-  - Detalle oculto 1
-  - Detalle oculto 2
-
-</details>
 
