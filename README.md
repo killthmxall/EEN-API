@@ -501,4 +501,21 @@ Una vez configurado y enviado el HTTP POST, se obtendrá como respuesta un códi
 
 ![](https://github.com/killthmxall/EEN-API/blob/main/assets/imagenes/img18.png?raw=true)
 
+---
+
+# Habilitar Azure Active Directory como IdP
+
+## Requisitos previos
+1. Si no tiene una cuenta en Azure AD, regístrese para obtener una cuenta gratuita en
+https://azure.micrsoft.com.
+
+2. Obtenga el redirectUri de la cuenta agregando su ID de cuenta al final de este redirectUri:
+```
+https://auth.eagleeyenetworks.com/login/oauth2/code/<account ID>
+```
+> [!NOTE]
+> El ```<account ID``` se obtiene desde la interfaz VMS de Eagle Eye Networks:
+> 
+![](https://github.com/killthmxall/EEN-API/blob/main/assets/imagenes/img19.png?raw=true)
+
 
