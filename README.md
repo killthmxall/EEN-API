@@ -513,9 +513,21 @@ https://azure.micrsoft.com.
 ```
 https://auth.eagleeyenetworks.com/login/oauth2/code/<account ID>
 ```
+
 > [!NOTE]
 > El ```<account ID``` se obtiene desde la interfaz VMS de Eagle Eye Networks:
 > 
 ![](https://github.com/killthmxall/EEN-API/blob/main/assets/imagenes/img19.png?raw=true)
 
+Ejemplo
+```
+https://auth.eagleeyenetworks.com/login/oauth2/code/00041487
+```
+
+## Configuración de una nueva aplicación en Azure AD
+
+1. Inicie sesión en la consola de Azure (https://portal.azure.com/#home) y navegue hasta **Manage Microsoft Entra ID**.
+2. Vaya a **App Registrations** en el panel izquierdo y cree un nuevo registro.
+4. Proporcione la siguiente información en el asistente **Register an Application**:
+	a. Asigne un nombre a la aplicación.
 
